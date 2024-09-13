@@ -1,0 +1,23 @@
+---
+import Card from '../components/card/card.astro'
+import Estrutura from '../layouts/Estrutura.astro'
+import data from '../../data.json'
+---
+
+<Estrutura>
+	<h1 class="mx-auto flex max-w-5xl text-2xl font-bold">Selecione o Carro</h1>
+	{
+		data.map((item) => (
+			<Card
+				car={item.car}
+				category={item.category}
+				imageSrc={item.imageSrc}
+				daily_price={item.daily_price}
+				days={1}
+				total_price={item.total_price}
+				transmission={item.transmission}
+				baggage_capacity={item.baggage_capacity}
+			/>
+		))
+	}
+</Estrutura>

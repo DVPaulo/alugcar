@@ -1,0 +1,55 @@
+---
+import Baggage from '../ui/Baggage.astro'
+import Transmission from '../ui/Transmission.astro'
+
+const { car, category, imageSrc, daily_price, total_price, transmission, baggage_capacity } =
+	Astro.props
+---
+
+<div
+	class="mx-auto grid max-w-5xl grid-cols-5 grid-rows-2 gap-6 overflow-hidden rounded-lg bg-White shadow-md"
+>
+	<!-- Imagem do carro, ocupando as duas linhas -->
+	<div class="col-span-2 row-span-2 flex items-center justify-center">
+		<img src={imageSrc} alt={car} class="max-h-48 max-w-full object-contain" />
+	</div>
+
+	<!-- Linha superior: nome do carro, categoria, e valores -->
+	<div class="col-span-3 flex items-center justify-between">
+		<div>
+			<h2 class="text-2xl font-semibold text-DarkBlue">{car}</h2>
+			<p class="mt-1 text-sm text-Gray">{category}</p>
+		</div>
+		<div class="mr-6 flex justify-between space-x-3">
+			<div class="text-center flex flex-col justify-center items-center">
+				<span class="block text-lg font-bold text-DarkBlue">{daily_price}</span>
+				<span class="text-xs text-Gray">valor diário</span>
+			</div>
+			<div class="text-center flex flex-col justify-center items-center">
+				<span class="block text-lg font-bold text-DarkBlue">01</span>
+				<span class="text-xs text-Gray">dia(s)</span>
+			</div>
+			<div class="text-center flex flex-col justify-center items-center">
+				<span class="block text-lg font-bold text-DarkBlue">{total_price}</span>
+				<span class="text-xs text-Gray">valor total</span>
+			</div>
+		</div>
+	</div>
+
+	<!-- Linha inferior: transmissão, capacidade de bagagem e botão -->
+	<div class="mr-6 col-span-3 flex items-center justify-between space-x-4">
+		<div class="flex items-center gap-2 text-sm text-Gray">
+			<Transmission />
+			<span>{transmission}</span>
+		</div>
+		<div class="flex items-center gap-2 text-sm text-Gray">
+			<Baggage />
+			<span>{baggage_capacity}</span>
+		</div>
+		<button
+			class="ml-auto rounded bg-yellow-500 px-6 py-2 text-white transition-colors hover:bg-yellow-600"
+		>
+			Reservar
+		</button>
+	</div>
+</div>

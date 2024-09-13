@@ -1,0 +1,38 @@
+[
+	{
+		"car": "Toyota Corolla",
+		"category": "Sedan Médio",
+		"daily_price": "R$ 93,00",
+		"total_price": "R$ 93,00",
+		"transmission": "Automático",
+		"imageSrc": "./public/assets/corolla.png",
+		"baggage_capacity": "460 Litros"
+	},
+	{
+		"car": "GM Onix",
+		"category": "Hatch Médio",
+		"daily_price": "R$ 77,00",
+		"total_price": "R$ 77,00",
+		"transmission": "Manual",
+		"imageSrc": "./public/assets/gm-onix.png",
+		"baggage_capacity": "320 Litros"
+	},
+	{
+		"car": "Fiat Mobi",
+		"category": "Hatch Compacto",
+		"daily_price": "R$ 56,00",
+		"total_price": "R$ 56,00",
+		"transmission": "Manual",
+		"imageSrc": "./public/assets/fiat-mobi.png",
+		"baggage_capacity": "120 Litros"
+	},
+	{
+		"car": "VW Nivus",
+		"category": "SUV",
+		"daily_price": "R$ 122,00",
+		"total_price": "R$ 122,00",
+		"transmission": "Automático",
+		"imageSrc": "./public/assets/vw-nivus.png",
+		"baggage_capacity": "460 Litros"
+	}
+]
